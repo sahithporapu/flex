@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            height: 100%;
+
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            width: 100%;
+
+            margin: 0;
+            padding: 0;
+
+            overflow-x: hidden;
+        }
+
+        header {
+            top: 0px;
+            letter-spacing: 3px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            position: fixed;
+            font-family: "Times New Roman", Georgia, Serif;
+            font-size: 16px;
+            box-sizing: border-box;
+            padding: 10px;
+            z-index: 999;
+            box-shadow: 2px 2px 50px rgb(133, 132, 132);
+
+        }
+
+        .right {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            padding-right: 20px;
+            flex-shrink: 1;
+
+        }
+
+        .hh {
+            font-family: "Times New Roman", Georgia, Serif;
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            border: 0px;
+            background-color: white;
+            cursor:pointer;
+        }
+         .hh {
+            color: black;
+            transition: 0.2s;
+        }
+         .hh:focus ,
+        .hh:active {
+            color: rgb(0, 0, 0);
+            padding:1px;
+            background-color: rgb(218, 218, 218);
+            font-weight: normal;
+            text-decoration: none;}
+
+        #gc,#ab,#me,#con{
+
+            scroll-margin-top: 100px;
+        }
+
+        .left {
+
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            padding-left: 20px;
+            flex-shrink: 1;
+        }
+
+        .burger {
+            padding-top: 60px;
+            background-image: url("hamburger.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: end;
+            box-sizing: border-box;
+
+
+        }
+
+        .burger h3 {
+            font-family: "Playfair Display";
+
+            color: rgb(90, 88, 88);
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            padding-left: 15px;
+
+        }
+
+        .catering {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 40px;
+            gap: 40px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+
+        .box1 img {
+            max-width: 500px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .box2 {
+            max-width: 500px;
+            box-sizing: border-box;
+            padding-top: 0px;
+
+        }
+
+        .box2 h2 {
+            padding-top: 0px;
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .box2 h4 {
+            font-family: "Playfair Display", serif;
+            font-weight: normal;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .p1 {
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .p2 {
+            padding-top: 10px;
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+            color: grey;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: center;
+            padding: 100px 40px;
+            gap: 40px;
+            align-items: center;
+            box-sizing: border-box;
+
+            flex-shrink: 1;
+
+        }
+
+        .box22 img {
+            max-width: 500px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            height: auto;
+            flex-shrink: 1;
+        }
+
+        .box11 {
+            max-width: 500px;
+            box-sizing: border-box;
+            padding-top: 0px;
+            padding-right: 20px;
+            flex-shrink: 1;
+        }
+
+        .box11 h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            margin-bottom: 50px;
+            text-align: center;
+            letter-spacing: 2px;
+            line-height: 1.6;
+
+        }
+
+        .box11 h4 {
+            font-family: "Playfair Display", serif;
+            font-weight: 17px;
+            justify-content: left;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .box11 p {
+            font-size: 15px;
+            text-align: justify;
+            line-height: 2.6;
+            padding-bottom: 20px;
+            word-spacing: 2px;
+            color: grey;
+            margin-bottom: 20px;
+
+        }
+
+        .container3 {
+            display: flex;
+
+            padding: 100px 40px;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            align-content: center;
+            justify-content: center;
+
+
+        }
+
+        .formcnt {
+            flex-shrink: 1;
+            width: 100%;
+            max-width: 1000px;
+            height: 100vh;
+            flex-direction: column;
+            font-family: "Playfair Display", serif;
+            align-items: center;
+            margin: 0px;
+        }
+
+        .formcnt h1 {
+            margin-bottom: 20px;
+            font-size: 35px;
+            font-weight: 100;
+            letter-spacing: 2px;
+            font-family: "Playfair Display", serif;
+
+
+        }
+
+        .formcnt p {
+            padding-top: 30px;
+            line-height: 1.6;
+
+
+            font-family: "Playfair Display", serif;
+
+        }
+
+        .formcnt h4 {
+            padding-top: 10px;
+            line-height: 1.6;
+            color: rgb(110, 110, 195);
+            font-size: 21px;
+
+            font-family: "Playfair Display", serif;
+        }
+
+        .contact-form {
+            max-width: 100%;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            font-family: "Playfair Display", serif;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            border: none;
+            border-bottom: 1px solid grey;
+            outline: none;
+            font-size: 16px;
+            padding: 10px 0;
+            background-color: transparent;
+            color: black;
+            font-family: "Playfair Display", serif;
+        }
+
+
+
+        .contact-form button {
+            width: fit-content;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: "Playfair Display", serif;
+        }
+
+        .foot {
+            display: flex;
+            font-family: "Playfair Display", serif;
+            font-size: 14px;
+            background-color: grey;
+            color: black;
+            padding: 15px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+
+        .main {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <div class="left">
+                <p><a href=#gc><button class="hh">Gourmet au Catering </button></a></p>
+
+            </div>
+            <div class="right">
+                <div>
+                    <p><a href="#ab" ><button class="hh">About</button></a></p>
+                </div>
+                <div>
+                    <p><a href="#me"><button class="hh">Menu</button></a></p>
+                </div>
+                <div>
+                    <p><a href="#con" ><button class="hh">Contact</button></a></p>
+                </div>
+            </div>
+
+        </header>
+
+        <div id="gc" class="burger">
+
+            <h3>Le Catering</h3>
+
+
+        </div>
+        <div class="catering">
+
+            <div class="box1">
+                <img src="./tablesetting2.jpg">
+            </div>
+
+            <div class="box2">
+                <h2 id="ab">About Catering</h2>
+                <h4>Tradition since 1889</h4>
+                <p class="p1">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur
+                    adipiscing
+                    elit
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim
+                    ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis
+                    aute
+                    iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only
+                    use
+                    seasonal ingredients.</p><br>
+                <p class="p2">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim
+                    id est
+                    laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna
+                    aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+            </div>
+            <div class="container2">
+                <div class="box11">
+                    <h1 id="me">Our Menu</h1>
+
+                    <h4> Bread Basket </h4>
+                    <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
+
+
+                    <h4>Honey Almond Granola with Fruits</h4>
+                    <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+
+
+                    <h4>Belgian Waffle</h4>
+                    <p>Vanilla flavored batter with malted flour 7.50</p>
+
+
+                    <h4>Scrambled eggs</h4>
+                    <p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+
+
+                    <h4>Blueberry Pancakes</h4>
+                    <p>With syrup, butter and lots of berries 8.50</p>
+                </div>
+                <div class="box22"> <img src="./tablesetting.jpg"></div>
+            </div>
+            <div class="container3">
+                <div class="formcnt">
+                    <h1 id="con">Contact</h1>
+                    <p>We offer full-service catering for any event, large or small. We understand your needs and we
+                        will
+                        cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not
+                        hesitate to
+                        contact us.</p>
+                    <h4>Catering Service, 42nd Living St, 43043 New York, NY</h4>
+                    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us
+                        a
+                        message here:</p>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="number" placeholder="Number of People" min="-100" max="100" required>
+                        <input type="datetime-local" value="2004-01-25 04:45">
+                        <textarea placeholder="Message \ Special requirements" rows="2"></textarea>
+                        <button type="submit">SEND MESSAGE</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <footer class="foot">
+            <h5>Powered by Sahith Porapu</h5>
+        </footer>
+    </div>
+</body>
+
+</html>
